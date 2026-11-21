@@ -1,0 +1,7 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+math-sdk/library/publish_files/
+math-sdk/test_build/
+.DS_Store
