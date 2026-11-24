@@ -1,3 +1,4 @@
+# Link: https://github.com/google-github-actions/run-gemini-cli/blob/main/README.md
 name: '🔎 Gemini Review'
 
 on:
@@ -19,6 +20,8 @@ defaults:
 jobs:
   review:
     runs-on: 'ubuntu-latest'
+    env:
+      GEMINI_CLI_TRUST_WORKSPACE: "true"
     timeout-minutes: 7
     permissions:
       contents: 'read'

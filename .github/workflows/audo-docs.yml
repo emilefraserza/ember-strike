@@ -1,0 +1,34 @@
+# LInk: https://www.leeboonstra.dev/genai/gemini_cli_github_actions/
+name: Auto-Update Documentation
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install Gemini CLI
+        run: npm install -g @google/gemini-cli
+      
+      - name: Generate Documentation
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          mkdir -p docs
+          gemini "Analyze this codebase and create API documentation in Markdown format. Include endpoints, parameters, and examples. Output only the markdown content." > docs/API.md
+      
+      - name: Commit updated docs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/
+          git diff --staged --quiet || git commit -m "🤖 Auto-update documentation"
+          git push

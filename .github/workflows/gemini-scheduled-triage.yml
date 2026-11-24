@@ -1,3 +1,4 @@
+# Link: https://github.com/google-github-actions/run-gemini-cli/blob/main/README.md
 name: '📋 Gemini Scheduled Issue Triage'
 
 on:
