@@ -10,8 +10,8 @@ on:
   pull_request:
     types:
       - 'opened'
-      - 'synchronize'
       - 'reopened'
+      - 'synchronize'
   issues:
     types:
       - 'opened'
@@ -91,7 +91,7 @@ jobs:
           REQUEST: '${{ github.event.comment.body || github.event.review.body || github.event.issue.body }}'
         with:
           script: |
-            const eventType = process.env.EVENT_TYPE;g
+            const eventType = process.env.EVENT_TYPE;
             const request = process.env.REQUEST;
             core.setOutput('request', request);
 
