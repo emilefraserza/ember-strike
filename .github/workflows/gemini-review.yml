@@ -77,10 +77,11 @@ jobs:
             {
               "allowUnsafeConfigPaths": true,
               "model": {
-                "maxSessionTurns": 25
+                 "name": "gemini-3.1-flash-lite-preview",
+                 "autoSwitchPlanMode": false
               },
               "telemetry": {
-                "enabled": true,
+                "enabled": false,
                 "target": "local",
                 "outfile": ".gemini/telemetry.log"
               },
