@@ -1,0 +1,40 @@
+{
+  "modes": [
+    {
+      "name": "base",
+      "cost": 1.0,
+      "events": "books_base.jsonl",
+      "weights": "lookUpTable_base_0.csv"
+    },
+    {
+      "name": "bonus_hunt",
+      "cost": 3.0,
+      "events": "books_bonus_hunt.jsonl",
+      "weights": "lookUpTable_bonus_hunt_0.csv"
+    },
+    {
+      "name": "buy_regular",
+      "cost": 100.0,
+      "events": "books_buy_regular.jsonl",
+      "weights": "lookUpTable_buy_regular_0.csv"
+    },
+    {
+      "name": "buy_super",
+      "cost": 350.0,
+      "events": "books_buy_super.jsonl",
+      "weights": "lookUpTable_buy_super_0.csv"
+    },
+    {
+      "name": "buy_epic",
+      "cost": 1000.0,
+      "events": "books_buy_epic.jsonl",
+      "weights": "lookUpTable_buy_epic_0.csv"
+    },
+    {
+      "name": "buy_random",
+      "cost": 185.0,
+      "events": "books_buy_random.jsonl",
+      "weights": "lookUpTable_buy_random_0.csv"
+    }
+  ]
+}
