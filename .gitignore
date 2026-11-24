@@ -7,7 +7,7 @@ math-sdk/test_build/
 .DS_Store
 
 # gemini-cli settings
-.gemini/
+#.gemini/
 
 # GitHub App credentials
 gha-creds-*.json
