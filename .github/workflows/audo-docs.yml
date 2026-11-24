@@ -3,7 +3,8 @@ name: Auto-Update Documentation
 
 on:
   push:
-    branches: [master]
+    branches: 
+      - main
 
 jobs:
   update-docs:
